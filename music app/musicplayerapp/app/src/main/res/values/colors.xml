@@ -1,0 +1,18 @@
+<resources>
+    <!-- app background & surfaces -->
+    <color name="background_dark">#121212</color>
+    <color name="card_bg">#1E1E1E</color>
+
+    <!-- your brand / accent -->
+    <color name="primary">#1DB954</color>
+    <color name="primary_dark">#1AA34A</color>
+    <color name="accent">#BB86FC</color>
+
+    <!-- text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+
+    <!-- a mid-gray that still fits dark theme -->
+    <color name="list_item_bg">#4A4A4A</color>
+
+</resources>

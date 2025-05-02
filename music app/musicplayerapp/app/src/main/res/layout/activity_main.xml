@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_dark"
+    tools:context=".MainActivity">
+
+    <!-- Play All Button -->
+    <ImageButton
+        android:id="@+id/btn_play_all"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_control_button"
+        android:padding="12dp"
+        app:srcCompat="@drawable/play"
+        android:contentDescription="@string/play_all"
+        android:layout_marginBottom="12dp"
+        app:tint="@color/text_primary" />
+
+    <!-- Song List -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:padding="4dp"
+        android:divider="@color/primary"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/primary_dark"
+        android:background="@color/list_item_bg"
+        android:cacheColorHint="@color/list_item_bg"
+        android:clipToPadding="false"/>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:padding="16dp"
+    tools:context=".PlaySong">
+
+    <!-- Album art with rounded card -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_card"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/r"/>
+
+    <!-- Song title -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Song Title"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Seek bar -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:progressTint="@color/primary"
+        android:thumbTint="@color/primary"
+        android:progressBackgroundTint="@color/card_bg"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Playback controls -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_control_button"
+            android:padding="12dp"
+            app:srcCompat="@drawable/previous"
+            app:tint="@color/text_primary"
+            />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_control_button"
+            android:padding="12dp"
+            app:srcCompat="@drawable/play"
+            app:tint="@color/text_primary" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_control_button"
+            android:padding="12dp"
+            app:srcCompat="@drawable/next"
+            app:tint="@color/text_primary" />
+
+        <ImageView
+            android:id="@+id/repeat"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_control_button"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_repeat_24"
+        app:tint="@color/primary"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
